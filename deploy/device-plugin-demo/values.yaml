@@ -1,0 +1,2 @@
+# 服务使用的镜像仓库地址
+image: ccr.ccs.tencentyun.com/qcloud-ti-platform/device-plugin-demo:v0.1-202401242028
