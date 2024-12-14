@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: device-test-pod
+spec:
+  containers:
+    - name: device-test-container
+      image: busybox
+      command: ["sh", "-c", "echo Hello, Kubernetes! && sleep 3600"]
+      resources:
+        requests:
+          mydevice.com/device: "1"
+        limits:
+          mydevice.com/device: "1"

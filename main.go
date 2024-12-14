@@ -9,12 +9,7 @@ import (
 func main() {
 	klog.Infof("my device plugin staring")
 	dp := deviceplugin.NewMyDevicePlugin()
-	go func() {
-		err := dp.Run()
-		if err != nil {
-			panic(err)
-		}
-	}()
+	go dp.Run()
 
 	// register when device plugin start
 	if err := dp.Register(); err != nil {
